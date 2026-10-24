@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['server-ssh-p']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=yes ubuntu@${SERVER_IP} "
+                        ssh -o ubuntu@${SERVER_IP} "
                             rm -rf ${APP_NAME}
                             git clone https://github.com/Sivachaithanya-Organisation/Tesla-mechanism.git
                             cd ${APP_NAME}
